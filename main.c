@@ -48,19 +48,19 @@ int main(void)
     /*for (int i = 0; i < 75; i++)
         tick();*/
 
-    for (char sc = 0; sc != 1;)
-    {
-        if (inb(0x60) != sc) //PORT FROM WHICH WE READ
-        {
-            sc = inb(0x60);
-            if (sc > 0)
-            {
-                //terminal_putinput(c); //print on screen
-                char c[2] = { translate(sc), 0 };
-                printk(c);
-            }
-        }
-    }
+    //for (char sc = 0; sc != 1;)
+    //{
+    //    if (inb(0x60) != sc) //PORT FROM WHICH WE READ
+    //    {
+    //        sc = inb(0x60);
+    //        if (sc > 0)
+    //        {
+    //            //terminal_putinput(c); //print on screen
+    //            char c[2] = { translate(sc), 0 };
+    //            printk(c);
+    //        }
+    //    }
+    //}
 
     halt(); 
     return 0; 
